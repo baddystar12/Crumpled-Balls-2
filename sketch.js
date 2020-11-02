@@ -6,16 +6,9 @@ const Bodies = Matter.Bodies;
 
 var engine, world;
 
-var paper;
+var paper1;
 var ground;
-var dustbin2, dustbin3, dustbinImage, dustbin;
-
-function preload(){
-paper = loadImage("Images/paper.png");
-dustbinImage = loadImage("Images/dustbin.png")
-}
-
-	
+var dustbin1, dustbin2, dustbin3;
 
 
 function setup() {
@@ -23,13 +16,13 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	paper = new Paper(100, 390, 40);
 	ground = new Ground(600, height, 1200, 20);
-	
+	paper1 = new Paper(100, 360, 30);
+	dustbin1 = new Dustbin(1100, 390, 100,10);
 	dustbin2 = new Dustbin(1050,380, 10, 100);
 	dustbin3 = new Dustbin(1150, 380, 10, 100);
-	dustbin = createSprite(1100,390,100,10);
-	dustbin.addImage(dustbinImage);
+	
+
 
 	
   
@@ -37,13 +30,13 @@ function setup() {
 
 
 function draw() {
-  background("white");
+  background("purple");
   rectMode(CENTER);
   Engine.update(engine);
-
+  
   paper1.display();
   ground.display();
-  
+  dustbin1.display();
   dustbin2.display();
   dustbin3.display();
 
@@ -56,4 +49,3 @@ function keyPressed(){
 		Matter.Body.applyForce(paper1.body, paper1.body.position,{x:85,y:-85});
 	}
 }
-
