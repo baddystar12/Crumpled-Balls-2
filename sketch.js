@@ -8,11 +8,11 @@ var engine, world;
 
 var paper;
 var ground;
-var dustbin;
+var dustbin2, dustbin3, dustbinImage, dustbin;
 
 function preload(){
 paper = loadImage("Images/paper.png");
-dustbin = loadImage("Images/dustbin.png")
+dustbinImage = loadImage("Images/dustbin.png")
 }
 
 	
@@ -25,10 +25,11 @@ function setup() {
 
 	paper = new Paper(100, 390, 40);
 	ground = new Ground(600, height, 1200, 20);
-	dustbin = new Dustbin(1100, 390, 100,10);
+	
 	dustbin2 = new Dustbin(1050,380, 10, 100);
 	dustbin3 = new Dustbin(1150, 380, 10, 100);
-
+	dustbin = createSprite(1100,390,100,10);
+	dustbin.addImage(dustbinImage);
 
 	
   
@@ -42,7 +43,7 @@ function draw() {
 
   paper1.display();
   ground.display();
-  dustbin1.display();
+  
   dustbin2.display();
   dustbin3.display();
 
