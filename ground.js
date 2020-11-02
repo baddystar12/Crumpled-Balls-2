@@ -15,4 +15,3 @@ class Ground {
             rect(position.x, position.y, this.width, this.height);
         }
     }
-    
