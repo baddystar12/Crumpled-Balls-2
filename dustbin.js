@@ -14,12 +14,11 @@ class Dustbin {
     display(){
         var position = this.body.position;
         push();
-        translate(position.x, position.y);
         rectMode(CENTER);
         fill("white");
         rect(0,0, this.width, this.height);
-       /* imageMode(CENTER);
-        this.image(this.image,1100,390,this.width,this.height);*/
+        imageMode(CENTER);
+        this.image(this.image,1100,390,this.width,this.height);
         pop();
     }
 }
