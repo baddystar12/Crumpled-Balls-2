@@ -15,7 +15,7 @@ class Paper {
         fill("white");
         ellipseMode(RADIUS);
         ellipse(position.x, position.y, this.radius, this.radius);
-       /* imageMode(CENTER);
-        image(this.image,0,0,this.width,this.height);*/
+        imageMode(CENTER);
+        image(this.image,position.x,positon.y,this.width,this.height);
     }
 }
