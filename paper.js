@@ -2,7 +2,7 @@ class Paper {
     constructor(x, y, radius){
         var paper_options = {
             friction : 0.5,
-            density : 2.1,
+            density : 1.2,
             restitution: 0.58
         }
         this.image = loadImage("Images/paper.png");
@@ -12,10 +12,7 @@ class Paper {
     }
     display(){
         var position = this.body.position;
-        fill("white");
-        ellipseMode(RADIUS);
-        ellipse(position.x, position.y, this.radius, this.radius);
         imageMode(CENTER);
-        image(this.image,position.x,positon.y,this.width,this.height);
+        image(this.image,position.x,positon.y,this.radius, this.radius);
     }
 }
