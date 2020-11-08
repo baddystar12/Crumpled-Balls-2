@@ -21,11 +21,6 @@ function setup() {
 	dustbin1 = new Dustbin(1100, 390, 100,10);
 	dustbin2 = new Dustbin(1050,380, 10, 100);
 	dustbin3 = new Dustbin(1150, 380, 10, 100);
-	
-
-
-	
-  
 }
 
 
