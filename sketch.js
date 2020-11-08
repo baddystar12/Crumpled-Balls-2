@@ -9,8 +9,11 @@ var engine, world;
 var paper1;
 var ground;
 var dustbin1, dustbin2, dustbin3;
+var dustbinImage;
 
-
+function preload(){
+dustbinImage = loadImage("Images/dustbin.png");
+}
 function setup() {
 	createCanvas(1200, 400);
 	engine = Engine.create();
@@ -34,6 +37,8 @@ function draw() {
   dustbin1.display();
   dustbin2.display();
   dustbin3.display();
+  imageMode(CENTER);
+  image(dustbinImage, 1100, 350,100, 100 );
 
   drawSprites();
  
@@ -41,6 +46,6 @@ function draw() {
 
 function keyPressed(){
 	if(keyCode===UP_ARROW){
-		Matter.Body.applyForce(paper1.body, paper1.body.position,{x:85,y:-85});
+		Matter.Body.applyForce(paper1.body, paper1.body.position,{x:50,y:-45});
 	}
 }
