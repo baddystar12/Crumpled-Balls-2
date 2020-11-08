@@ -13,6 +13,6 @@ class Paper {
     display(){
         var position = this.body.position;
         imageMode(CENTER);
-        image(this.image,position.x,positon.y,this.radius, this.radius);
+        image(this.image,position.x,position.y,this.radius, this.radius);
     }
 }
